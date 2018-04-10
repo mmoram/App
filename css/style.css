@@ -1,0 +1,23 @@
+a {
+  color: #00B7FF;
+}
+#map {
+  height: 100%;
+  width: 80%;
+  float: left;
+}
+#controls {
+  height: 100%;
+  width: 20%;
+  object-position: right;
+  float: right;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+input {
+  margin: 5%;
+}

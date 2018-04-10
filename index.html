@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel='stylesheet' type="text/css">
+<script src="http://maps.googleapis.com/maps/api/js?key=<CHAVE>&sensor=false"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<html>
+  <head>
+    <title>Scooter simulator</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <div id="map"></div>
+      <div id="controls">
+        <input type="button" id="generate" value="Generate"/>
+        <br/>
+        <input type="button" id="exterminate" value="Exterminate"/>
+        <br/>
+        <input type="button" id="next" value="Next user"/>
+      </div>
+    
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 52.545920, lng: 13.349132},
+          zoom: 12
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB20Tu66EcSVp2nTd5ZUE5jHaSgENMpxTE&callback=initMap"
+    async defer></script>
+    <script src="./app.js"></script>
+    
+  </body>
+</html>
